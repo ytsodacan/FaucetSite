@@ -1751,5 +1751,41 @@
     <script src="./scripts/components.js"></script>
     <script src="./index.js"></script>
 
+        <script>
+        async function findAsset() {
+            const api = 'https://api.github.com/repos/ytsodacan/FaucetBuilds/releases/tags/build';
+            const assetLink = document.getElementById('asset-link');
+            const downloadCta = document.getElementById('download-cta');
+            try {
+                const res = await fetch(api);
+                if (!res.ok) throw new Error('release not found');
+                const data = await res.json();
+                const assets = Array.isArray(data.assets) ? data.assets : [];
+                const target = assets.find(a => a.name === 'DefNotLCE.zip');
+                if (target && target.browser_download_url) {
+                    assetLink.href = target.browser_download_url;
+                    assetLink.removeAttribute('aria-disabled');
+                    assetLink.textContent = 'Download Faucet';
+                    downloadCta.href = target.browser_download_url;
+                    downloadCta.textContent = 'Download Faucet';
+                    document.getElementById('spinner')?.remove();
+                    return;
+                } else {
+                    throw new Error('asset not found');
+                }
+            } catch (e) {
+                document.getElementById('spinner')?.remove();
+                assetLink.href = 'https://github.com/ytsodacan/FaucetBuilds/releases/tag/build';
+                assetLink.removeAttribute('aria-disabled');
+                assetLink.textContent = 'Open release page';
+                downloadCta.href = 'https://github.com/ytsodacan/FaucetBuilds/releases/tag/build';
+                downloadCta.textContent = 'Open release page';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            findAsset();
+        });
+    </script>
     <!-- By Paul: https://github.com/PaulleDemon -->
 </html>
