@@ -76,7 +76,7 @@
                                 max-lg:tw-gap-5 lg:tw-mx-auto tw-place-items-center"
                 >
                     <a class="header-links" href="https://ytsodacan.github.io/FaucetDocs"> Docs </a>
-                    <a class="header-links" href="#"> Blog </a>
+                    <a class="header-links" href="#download"> Download </a>
                     <a class="header-links" href="#"> Solutions </a>
                    
                     <div class="tw-relative tw-flex tw-flex-col tw-place-items-center">
@@ -532,33 +532,25 @@
         </section>
 
             
-        <section
-            class="tw-relative tw-flex  tw-w-full tw-min-h-[100vh] max-lg:tw-min-h-[80vh] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden"
-        >   
-             <div class="tw-w-full  tw-place-content-center tw-items-center 
-                        tw-flex tw-flex-col tw-max-w-[900px] tw-gap-4 tw-p-4">
-               <div class="purple-bg-grad  reveal-up tw-absolute tw-right-[20%] tw-top-[20%] tw-h-[200px] tw-w-[200px]"
-                ></div>
-                <h2 class="reveal-up tw-text-6xl max-lg:tw-text-4xl tw-text-center tw-leading-normal tw-uppercase">
-                    
-                    <span class="tw-font-semibold">Build your own AI Apps </span>
-                    <br>
-                    <span class="tw-font-serif">on top of Pixa APIs</span>
-                </h2>
-                <p class="reveal-up tw-mt-8 tw-max-w-[650px] tw-text-gray-900 dark:tw-text-gray-200 tw-text-center max-md:tw-text-sm">   
-                    Pixa's Playground is powered by Pixa's cutting-edge LLM API endpoints. Our powerful models simplify task automation, offering 
-                    advanced capabilities in summarization, text generation, and Q&A handling. 
-                </p>
-                <div class="reveal-up tw-flex tw-mt-8">
-                    <a href="#" 
-                        target="_blank"
-                        rel="noopener"
-                        class="tw-shadow-md hover:tw-shadow-xl dark:tw-shadow-gray-800 tw-transition-all tw-duration-300 
-                                        tw-border-[1px] tw-p-3 tw-px-4 tw-border-black dark:tw-border-white tw-rounded-md">
-                        Check Pixa APIs
-                    </a>
-                </div>
+          <section id="download" class="tw-w-full tw-max-w-3xl tw-text-center tw-mb-12">
+            <h2 class="tw-text-3xl tw-font-semibold">Download</h2>
+            <p class="tw-mt-3 tw-text-sm tw-text-gray-700 dark:tw-text-gray-300">
+                Download the Faucet Client
+            </p>
+
+            <div class="tw-mt-6 tw-flex tw-justify-center tw-gap-4">
+                <a id="asset-link" class="btn tw-px-6 tw-py-3 tw-rounded-xl tw-bg-[#059669] tw-text-white tw-inline-flex tw-items-center tw-gap-2" href="#" target="_blank" rel="noopener" aria-disabled="true">
+                    Downloading...
+                    <svg id="spinner" class="tw-ml-2 tw-h-4 tw-w-4 tw-animate-spin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" stroke-opacity="0.25"></circle>
+                        <path d="M22 12a10 10 0 0 1-10 10" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
+                    </svg>
+                </a>
             </div>
+
+            <p id="download-note" class="tw-mt-4 tw-text-xs tw-text-gray-600 dark:tw-text-gray-400">
+                Downloads served from GitHub releases. If you hit API rate limits, open the release page directly.
+            </p>
         </section>
 
         <section
